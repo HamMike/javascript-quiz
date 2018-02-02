@@ -1,14 +1,7 @@
-h1 {
-	color: blue;
-}
-
 .vertical-center {
 	position: absolute;
 	top: 40%;
 	transform: translateY(-50%);
-}
-
-#homepage {
 }
 
 #quizPage {
@@ -17,4 +10,8 @@ h1 {
 
 #scorePage {
 	display: none;
+}
+
+#score {
+    font-size: 10em;
 }
