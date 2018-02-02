@@ -1,0 +1,25 @@
+REQUIREMENTS
+1. Radio buttons for selecting answers
+2. Show the user's score at the end. *Last page* will only show the score.
+3. Questions should be stored as an array of objects
+4. var allQuestions = [{question: "Who is Prime Minister of the United Kingdom?", choices: ["David Cameron", "Gordon Brown", "Winston Churchill", "Tony Blair"], correctAnswerIndex:0}];
+5. Only button is "Next". This submits an answer, and loads the next question.
+6. Data validation: make sure the user answers each question before showing to the next question.
+
+Toolkit
+1. jQuery
+2. Bootstrap
+
+HTML/CSS tasks
+1. Build the landing page DONE
+2. Build the quiz + score page DONE
+
+JavaScript tasks
+1. Click handler for category select menu DONE 
+2. Function that queries the API, and then grooms the results to go into the data format we want DONE 
+3. Function that copies orignal questions, randomizes order of answers
+4. Click handler for the "Next" button (which loads the question view and a question. If q < 9 normal. q == 9 change button to finish. q == 10, call score function)
+5. Click handler for the answers (shows the next button, store the user's answer)
+6. Score function that tallys results
+
+
