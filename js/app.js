@@ -7,11 +7,13 @@ var score = 0;
 var lastQuestionIndex = 0;
 
 
+// "on change" event handler for category selection menu
 function categorySelect() {
 	var category = $("#category").val();
 	getData(category);
 }
 
+// Call the API to get data and groom to proper format
 function getData(cat) {
 	var url = "https://opentdb.com/api.php?amount=10&type=multiple&category=" + cat;
 	$.get(url).done(function(data){
@@ -26,6 +28,7 @@ function getData(cat) {
 	});
 }
 
+// Randomize answer order to make quiz unpredictable
 function shuffleAnswers() {
 	shuffledQuestions = questionsKey.map(function(item) {
 		var rObj = {};
@@ -43,14 +46,14 @@ function shuffleAnswers() {
 	});
 	displayQuestion();
 	$("#homepage").hide();
-	$("#quizPage").show(); //IS THIS THE RIGHT DISPLAY VALUE?
+	$("#quizPage").show();
 }
 
+// Make sure an end state hasn't been reached, then show the next question
 function displayQuestion() {
 	if (shuffledQuestions.length < 10) {
 		checkAnswer();
 	}
-	
 	if (shuffledQuestions.length > 0) {
 		$("#questionNumber").text(11 - shuffledQuestions.length);
 		$("#currentQuestion").html(shuffledQuestions[0].question);
@@ -67,9 +70,9 @@ function displayQuestion() {
 	} else {
 		displayScore();
 	}
-
 }
 
+// Check whether the user's answer is correct, and if so increment score++
 function checkAnswer() {
 	//get the question that was asked
 	var lastQuestion = questionsKey[lastQuestionIndex]
@@ -88,6 +91,8 @@ function checkAnswer() {
 	if(answeredCorrectly) { score++; }
 }
 
+
+// Make sure the user has answered the previous question, then call the next question
 function next() {
 	var answeredLastQuestion = false;
 	Array.prototype.forEach.call($("input[type='radio']"), function(item) {
@@ -100,12 +105,14 @@ function next() {
 	}
 }
 
+// Show the score page
 function displayScore() {
 	$("#score").text(score);
 	$("#quizPage").hide();
 	$("#scorePage").show();
 }
 
+// Reset the game
 function playAgain() {
 	$("#category").off("change")
 	$("option[value='0']").prop("selected", true);
@@ -116,6 +123,7 @@ function playAgain() {
 	$("#homepage").show();
 }
 
+// Set event handlers once the DOM is ready
 $(document).ready(function() {
 	$("#category").on("change", categorySelect);
 	$("#next").on("click", next);

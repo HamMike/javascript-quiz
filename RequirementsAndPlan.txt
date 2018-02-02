@@ -11,15 +11,15 @@ Toolkit
 2. Bootstrap
 
 HTML/CSS tasks
-1. Build the landing page DONE
-2. Build the quiz + score page DONE
+1. Build the landing page [DONE]
+2. Build the quiz + score page [DONE]
 
 JavaScript tasks
-1. Click handler for category select menu DONE 
-2. Function that queries the API, and then grooms the results to go into the data format we want DONE 
-3. Function that copies orignal questions, randomizes order of answers
-4. Click handler for the "Next" button (which loads the question view and a question. If q < 9 normal. q == 9 change button to finish. q == 10, call score function)
-5. Click handler for the answers (shows the next button, store the user's answer)
-6. Score function that tallys results
+1. Click handler for category select menu [DONE ]
+2. Function that queries the API, and then grooms the results to go into the data format we want [DONE ]
+3. Function that copies orignal questions, randomizes order of answers [DONE]
+4. Click handler for the "Next" button (which loads the question view and a question. If q < 9 normal. q == 9 change button to finish. q == 10, call score function) [DONE]
+5. Click handler for the answers (shows the next button, store the user's answer) [DONE]
+6. Score function that tallys results [DONE]
 
 
