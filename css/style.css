@@ -1,0 +1,20 @@
+h1 {
+	color: blue;
+}
+
+.vertical-center {
+	position: absolute;
+	top: 40%;
+	transform: translateY(-50%);
+}
+
+#homepage {
+}
+
+#quizPage {
+	display: none;
+}
+
+#scorePage {
+	display: none;
+}
